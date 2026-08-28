@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import { DynamicTheme } from "@/components/dynamic-theme";
 import { LandingPage } from "@/pages/landing-page";
@@ -8,7 +8,7 @@ import { AdminPage } from "@/pages/admin-page";
 
 export function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <DynamicTheme />
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -17,7 +17,7 @@ export function App() {
         <Route path="/admin" element={<AdminPage />} />
       </Routes>
       <Toaster position="top-center" />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
